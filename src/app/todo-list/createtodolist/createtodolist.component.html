@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <form (ngSubmit)="CreateTodoList()">
+    <div class="form-group col-md-3">
+      <label >List Name</label>
+      <input type="text" name="ListName" [(ngModel)]="ListName" class="form-control"
+        placeholder="List Name">
+    </div>
+    <div class="form-group col-md-3">
+      <label >Item Name</label>
+      <input type="text" name="ItemName" [(ngModel)]="ItemName" class="form-control" placeholder="Item Name">
+    </div>
+    <div class="form-group col-md-3">
+      <label >Subitem Name</label>
+      <input type="email" name="SubItemName" [(ngModel)]="SubItemName" class="form-control"  placeholder="Subitem Name">
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

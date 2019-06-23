@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <form (ngSubmit)="signup()">
+    <div class="form-group col-md-3">
+      <label >FirstName</label>
+      <input type="text" name="firstName" [(ngModel)]="firstName" class="form-control"
+        placeholder="FirstName">
+    </div>
+    <div class="form-group col-md-3">
+      <label >LastName</label>
+      <input type="text" name="lastName" [(ngModel)]="lastName" class="form-control" placeholder="LastName">
+    </div>
+    <div class="form-group col-md-3">
+      <label >Email</label>
+      <input type="email" name="email" [(ngModel)]="email" class="form-control"  placeholder="Email">
+    </div>
+    <div class="form-group col-md-3">
+      <label >Password</label>
+      <input type="password" name="Password" [(ngModel)]="Password" class="form-control" placeholder="Password">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-1">
+        <label >Countrycode</label>
+        <select id="inputState" class="form-control" #country="ngModel" name="countrycode" [(ngModel)]="countrycode" class="form-control" placeholder="Countrycode">
+          <option selected>Choose...</option>
+          <option *ngFor="let country of countrylist" [value]="country.value">{{country.value}}</option>
+        </select>          
+      </div>
+      <div class="form-group col-md-3">
+        <label>MobileNumber</label>
+        <input type="text" name="mobileNumber" [(ngModel)]="mobileNumber" class="form-control" placeholder="MobileNumber">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <button type="button" class="nav-link active" class="btn btn-success" (click)="createtodolist()">Create
+        List</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link active" class="btn btn-primary" (click)="findfriends()">Find
+        friends</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link active" class="btn btn-dark" (click)="myfriendlist()">My friend
+        list</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link active" class="btn btn-secondary" (click)="friendrequestsent()">Friend request
+        sent</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link active" class="btn btn-warning" (click)="friendrequestreceived()">Friend request
+        received</button>
+    </li>
+  </ul>
+  <br>
+  <br>
+</div>
+<div class="container" *ngIf="Collection">
+  <div class="card text-center" *ngFor="let x of Collection">
+    <div class="card-header">
+      <h5>ListName</h5>
+      {{x.ListName}}
+    </div>
+    <div class="card-body">
+      <h5>ItemName</h5>
+      <p class="card-title">{{x.ItemName}}</p>
+      <h5>SubItemName</h5>
+      <p class="card-text">{{x.SubItemName}}</p>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" (click)="edititems(x.ListId)">Edit</button>
+        <button type="button" (click)="additems(x.ListId)" class="btn btn-secondary">Add items</button>
+        <button type="button" (click)="addsubitems(x.ListId)" class="btn btn-secondary">Add Subitems</button>
+        <button type="button" (click)="deletelist(x.ListId)" class="btn btn-secondary">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

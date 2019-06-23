@@ -1,0 +1,18 @@
+<div class="container" *ngIf="friendlist">
+  <button type="button" class="nav-link active" class="btn btn-success" (click)="gotoDashboard()">Go to Dashboard</button>
+  <br>
+  <div class="card text-center" *ngFor="let x of friendlist">
+    <div class="card-header">
+      <h5>ListName</h5>
+      {{x.ListName}}
+    </div>
+    <div class="card-body">
+      <h5>ItemName</h5>
+      <p class="card-title">{{x.ItemName}}</p>
+      <h5>SubItemName</h5>
+      <p class="card-text">{{x.SubItemName}}</p>
+    </div>
+    <button type="button" class="nav-link active" class="btn btn-warning"
+      (click)="friendsingleviewlist(x.UserId,x.ListId)">Open List</button>
+  </div>
+</div>

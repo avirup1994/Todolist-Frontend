@@ -1,0 +1,9 @@
+<div class="container" *ngIf="allfriendsarray">
+  <div class="card" style="width: 18rem;" *ngFor="let x of allfriendsarray">
+      <div class="card-body">
+        <h5>User</h5>
+        {{x.firstName}} {{x.lastName}}
+      </div>
+      <button type="button" class="btn btn-primary" (click)="sendfriendrequest(x.UserId,x.firstName,x.lastName)">Send request</button>
+    </div>
+  </div>

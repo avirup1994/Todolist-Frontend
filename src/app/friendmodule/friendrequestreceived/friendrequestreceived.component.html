@@ -1,0 +1,11 @@
+<div class="container" *ngIf="fetchusers">
+  <button type="button" class="nav-link active" class="btn btn-success" (click)="gotoDashboard()">Go to Dashboard</button>
+  <div class="card" style="width: 18rem;" *ngFor="let x of fetchusers">
+    <div class="card-body">
+      <h4>User</h4>
+      <h5 class="card-title">{{x.friendName}}</h5>
+      <button type="button" class="btn btn-success" (click)="acceptingfriendrequest(x.friendName,x.friendId)">Accept</button>
+      <button type="button" class="btn btn-secondary" (click)="rejectfriendrequest(x.friendName,x.friendId)">Reject</button>
+    </div>
+  </div>
+</div>

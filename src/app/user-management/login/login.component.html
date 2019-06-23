@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <form (ngSubmit)="Login()">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Email</label>
+        <input type="email" name="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputAddress">Password</label>
+      <input type="password" name="Password" [(ngModel)]="Password"class="form-control" id="inputAddress" placeholder="Password">
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+  <br>
+  <p>Forgot Password??</p>
+    <button type="submit" (click)="Forgot()" class="btn btn-primary">Click Here</button>
+</div>
